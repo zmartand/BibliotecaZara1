@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LectorService {
@@ -37,5 +38,13 @@ public class LectorService {
                     return lectorRepository.save(lectorActualizado);
                 });
     }
+    public Optional<Lector> obtenerLectorPorId(Long id) {
+        return lectorRepository.findById(id);
+    }
+    public List<Lector> listarTodos() {
+        return lectorRepository.findAll();
+    }
+
+
 
 }
