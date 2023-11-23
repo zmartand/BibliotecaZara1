@@ -11,5 +11,5 @@ public class Prestamo {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lector_id")
     private Lector lector;
-    
+
 }
